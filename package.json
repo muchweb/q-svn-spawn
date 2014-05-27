@@ -1,6 +1,6 @@
 {
   "name": "q-svn-spawn",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Wrapper for svn-spawn that make use of Q promises",
   "main": "index.js",
   "scripts": {
