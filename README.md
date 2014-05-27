@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/muchweb/q-svn-spawn.svg?branch=master)](https://travis-ci.org/muchweb/q-svn-spawn)
 [![Dependency Status](https://gemnasium.com/muchweb/q-svn-spawn.svg)](https://gemnasium.com/muchweb/q-svn-spawn)
 [![NPM version](https://badge.fury.io/js/q-svn-spawn.svg)](http://badge.fury.io/js/q-svn-spawn)
 
