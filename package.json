@@ -1,0 +1,21 @@
+{
+  "name": "q-svn-spawn",
+  "version": "0.0.2",
+  "description": "Wrapper for svn-spawn that make use of Q promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "./test/init.sh && nodeunit test"
+  },
+  "keywords": [
+    "svn",
+    "subversion",
+    "q",
+    "promises"
+  ],
+  "author": "muchweb",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "q": "^1.0.1",
+    "svn-spawn": "^0.1.4"
+  }
+}
