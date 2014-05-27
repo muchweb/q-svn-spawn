@@ -8,33 +8,33 @@ var Client = require('../'),
 
 module.exports = {
 	'test checkout': function (test) {
-		client.checkout(repo).then(function (data) {
+		client.checkout(repo).done(function (data) {
 			test.done();
 		});
 	},
 
 	'test info': function (test) {
-		client.getInfo().then(function (data) {
+		client.getInfo().done(function (data) {
 			test.ok('url' in data);
 			test.done();
 		});
 	},
 
 	'test update': function (test) {
-		client.update().then(function (data) {
+		client.update().done(function (data) {
 			test.ok(data.indexOf('At revision') !== -1);
 			test.done();
 		});
 	},
 
 	'test status': function (test) {
-		client.getStatus().then(function (data) {
+		client.getStatus().done(function (data) {
 			test.done();
 		});
 	},
 
 	'test log': function (test) {
-		client.getLog().then(function (data) {
+		client.getLog().done(function (data) {
 			test.ok('author' in data[0]);
 			test.done();
 		});
@@ -43,13 +43,13 @@ module.exports = {
 	'test add': function (test) {
 		fs.writeFileSync(workingPath + '/a.txt', new Date().toString());
 
-		client.addLocal().then(function (data) {
+		client.addLocal().done(function (data) {
 			test.done();
 		});
 	},
 
 	'test delete': function (test) {
-		client.del('b.txt').then(function (data) {
+		client.del('b.txt').done(function (data) {
 			test.done();
 		});
 	},
@@ -57,15 +57,15 @@ module.exports = {
 	'test commit': function (test) {
 		fs.writeFileSync(workingPath + '/a.txt', new Date().toString());
 
-		client.addLocal().then(function (data) {
-			client.commit('test commit').then(function (data) {
+		client.addLocal().done(function (data) {
+			client.commit('test commit').done(function (data) {
 				test.done();
 			});
 		});
 	},
 
 	'test update': function (test) {
-		client.update().then(function (data) {
+		client.update().done(function (data) {
 			test.done();
 		});
 	},

@@ -11,12 +11,12 @@ Wrapper for [ddliu](https://github.com/ddliu)'s [svn-spawn](https://github.com/d
 
 ## Usage
 
-Create a svn client instance
+Create a SVN client instance
 
 ```js
 var QSVNSpawn = require('q-svn-spawn'),
 	client = new QSVNSpawn({
-	    cwd: '/path to your svn working directory',
+	    cwd: '/path to your SVN working directory',
 	    username: 'username', // Optional if authentication not required or is already saved
 	    password: 'password', // Optional if authentication not required or is already saved
 	});
@@ -33,7 +33,7 @@ client.update().done(function (data) {
 `svn info`
 
 ```js
-client.getInfo().then(function (data) {
+client.getInfo().done(function (data) {
     console.log('Repository url is %s', data.url);
 });
 ```
@@ -41,10 +41,10 @@ client.getInfo().then(function (data) {
 Make some changes and commit all
 
 ```js
-client.addLocal().then(function (data) {
+client.addLocal().done(function (data) {
     console.log('All local changes has been added for commit');
 
-    client.commit('commit message here').then(function (data) {
+    client.commit('commit message here').done(function (data) {
         console.log('local changes has been committed!');
     });
 });
@@ -53,17 +53,17 @@ client.addLocal().then(function (data) {
 Adding single file
 
 ```js
-client.add('relative/path/to/file').then(function (data) {
-    client.commit(['commit message here', 'relative/path/to/file']).then(function (data) {
+client.add('relative/path/to/file').done(function (data) {
+    client.commit(['commit message here', 'relative/path/to/file']).done(function (data) {
         console.log('Committed one file!');
     });
 });
 ```
 
-Run any svn command
+Run any SVN command
 
 ```js
-client.cmd(['subcommand', '--option1=xx', '--option2=xx', 'arg1', 'arg2']).then(function (data) {
+client.cmd(['subcommand', '--option1=xx', '--option2=xx', 'arg1', 'arg2']).done(function (data) {
     console.log('Subcommand done');
 });
 ```
