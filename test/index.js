@@ -57,10 +57,10 @@ module.exports = {
 	'test commit': function (test) {
 		fs.writeFileSync(workingPath + '/a.txt', new Date().toString());
 
-		client.addLocal().done(function (data) {
-			client.commit('test commit').done(function (data) {
-				test.done();
-			});
+		client.addLocal().then(function () {
+			return client.commit('test commit');
+		}).then(function () {
+			test.done();
 		});
 	},
 
