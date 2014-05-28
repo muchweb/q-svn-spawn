@@ -1,8 +1,4 @@
-[![Build Status](https://travis-ci.org/muchweb/q-svn-spawn.svg?branch=master)](https://travis-ci.org/muchweb/q-svn-spawn)
-[![Dependency Status](https://gemnasium.com/muchweb/q-svn-spawn.svg)](https://gemnasium.com/muchweb/q-svn-spawn)
-[![NPM version](https://badge.fury.io/js/q-svn-spawn.svg)](http://badge.fury.io/js/q-svn-spawn)
-
-# q-svn-spawn
+# q-svn-spawn [![Build Status](https://travis-ci.org/muchweb/q-svn-spawn.svg?branch=master)](https://travis-ci.org/muchweb/q-svn-spawn) [![Dependency Status](https://gemnasium.com/muchweb/q-svn-spawn.svg)](https://gemnasium.com/muchweb/q-svn-spawn) [![NPM version](https://badge.fury.io/js/q-svn-spawn.svg)](http://badge.fury.io/js/q-svn-spawn)
 
 Wrapper for [ddliu](https://github.com/ddliu)'s [svn-spawn](https://github.com/ddliu/node-svn-spawn) that makes use of [Q promises](https://github.com/kriskowal/q); an easy way to access svn repository with node.js.
 
