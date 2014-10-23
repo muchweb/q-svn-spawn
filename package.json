@@ -18,7 +18,7 @@
     "promises"
   ],
   "author": "muchweb",
-  "license": "GPL-2.0",
+  "license": "GPL-3.0+",
   "dependencies": {
     "q": "~2",
     "svn-spawn": "^0.1.4"

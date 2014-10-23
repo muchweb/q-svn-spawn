@@ -78,13 +78,13 @@ client.cmd(['subcommand', '--option1=xx', '--option2=xx', 'arg1', 'arg2']).done(
 });
 ```
 
-## Result Object
+## Return objects
 
-For return value documentation please refer to [svn-spawn documentation](https://github.com/ddliu/node-svn-spawn#result-object).
+Please refer to [svn-spawn documentation](https://github.com/ddliu/node-svn-spawn#result-object).
 
 ## Requirements
 
-You need to have the `svn` command installed.
+You need to have command line `svn` installed ([installation inscructions](https://subversion.apache.org/packages.html)).
 
 ## Installation
 
@@ -98,4 +98,21 @@ Requires `nodeunit` installed globally.
 
 ```bash
 npm test
+```
+
+## License ![GPL-3.0+](https://cloud.githubusercontent.com/assets/7157049/4762822/bb25d628-5b07-11e4-8b27-692c75e97759.png)
+
+```
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ```
