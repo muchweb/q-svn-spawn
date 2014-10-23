@@ -9,22 +9,25 @@ Wrapper for [@ddliu](https://github.com/ddliu)'s [svn-spawn](https://github.com/
 - Common SVN commands are all supported
 
 ## Usage
-Create SVN client instance
+Create an SVN client instance
 
 ```javascript
 var QSVNSpawn = require('q-svn-spawn'),
 	client = new QSVNSpawn({
-		cwd: '/path to your SVN working directory',
+
+        // Path to your SVN working directory
+		cwd: '/bar',
 
 		// Optional, authentication not required if already saved
 		username: 'username',
 		password: 'password',
+
 	});
 ```
 
 ### `svn update`
 
-```js
+```javascript
 client.update().done(function (data) {
 	console.log('Updated');
 });
@@ -32,17 +35,17 @@ client.update().done(function (data) {
 
 ### `svn info`
 
-```js
+```javascript
 client.getInfo().done(function (data) {
 	console.log('Repository url is %s', data.url);
 });
 ```
 
-### `scn commit`
+### `svn commit`
 
 Make some changes and commit all changed files
 
-```js
+```javascript
 console.log('Adding local changes to commit');
 client.addLocal()
 	.then(function () {
@@ -56,7 +59,7 @@ client.addLocal()
 
 or only single changed file
 
-```js
+```javascript
 
 client.add('relative/path/to/file')
 	.then(function () {
@@ -69,7 +72,7 @@ client.add('relative/path/to/file')
 
 ### Any other command
 
-```js
+```javascript
 client.cmd(['subcommand', '--option1=xx', '--option2=xx', 'arg1', 'arg2']).done(function (data) {
 	console.log('Subcommand done');
 });

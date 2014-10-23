@@ -4,7 +4,12 @@
   "description": "Wrapper for svn-spawn that make use of Q promises",
   "main": "index.js",
   "scripts": {
-    "test": "./test/init.sh && nodeunit test"
+    "pretest": "npm run compile && ./test/init.sh",
+    "test": "./node_modules/.bin/nodeunit test",
+    "posttest": "rm -rf $(pwd)/test/tmp",
+    "compile": "./node_modules/.bin/coffee --map --compile --output lib src",
+    "postinstall": "npm run compile",
+    "prepublish": "npm run compile"
   },
   "keywords": [
     "svn",
@@ -17,6 +22,10 @@
   "dependencies": {
     "q": "~2",
     "svn-spawn": "^0.1.4"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "nodeunit": "^0.9.0"
   },
   "repository": {
     "type": "git",
