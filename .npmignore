@@ -2,3 +2,5 @@ node_modules
 npm-debug.log
 src
 test
+.travis.yml
+.npmignore
