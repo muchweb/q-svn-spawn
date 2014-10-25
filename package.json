@@ -8,7 +8,6 @@
     "test": "./node_modules/.bin/nodeunit test",
     "posttest": "rm -rf $(pwd)/test/tmp",
     "compile": "./node_modules/.bin/coffee --map --compile --output lib src",
-    "postinstall": "npm run compile",
     "prepublish": "npm run compile"
   },
   "keywords": [
