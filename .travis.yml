@@ -1,6 +1,12 @@
 language: node_js
 node_js:
-  - 0.10
+  - 0.1
 before_install:
-  - "sudo apt-get update -qq"
-  - "sudo apt-get install -qq subversion"
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq subversion
+deploy:
+  provider: npm
+  on:
+    tags: true
+  api_key:
+    secure: Pdf3R+DwOazM7r8LmHlq9vU50GrKXU9L0BaF+tue/g9e13L/SViyim7EizKuP+Pt1YQ8lXiosNpo5L6Y4KQaOD/n78pl54Z1/aAnajLVf1T1Tc0UftTwKfebALJY995Xol9zJH5hNwpVXpA+qKllyqW9IzRKIGyGVMme1LyYjUc=
